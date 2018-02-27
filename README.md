@@ -1,1 +1,1 @@
-# scaffolding
+# full_page
