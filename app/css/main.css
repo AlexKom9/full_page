@@ -1,0 +1,162 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+/***********************MEDIA QUERIES***********************/
+/***********************COLORS & FONTS***********************/
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../fonts/Dancing_Script/DancingScript-Regular.ttf");
+  font-style: normal;
+  font-weight: 500; }
+
+@font-face {
+  font-family: "DancingScript";
+  src: url("../fonts/Dancing_Script/DancingSript-Boldr.ttf");
+  font-style: normal;
+  font-weight: 700; }
+
+@font-face {
+  font-family: "SatisfyRegular";
+  src: url("../fonts/Satisfy/Satisfy-Regular.ttf");
+  font-style: normal;
+  font-weight: 500; }
+
+.l-container {
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  @media (min-width: 320px) {
+    .l-container {
+      width: 100%;
+      padding: 0 15px; } }
+  @media (min-width: 767px) {
+    .l-container {
+      width: 90%; } }
+  @media (min-width: 1024px) {
+    .l-container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .l-container {
+      width: 1170px; } }
+  @media (min-width: 1500px) {
+    .l-container {
+      width: 1460px; } }
+
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+.l-container {
+  padding-top: 50px; }
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: gold; }
+
+.section {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  opacity: 0; }
+  .section--active {
+    opacity: 1;
+    z-index: 50; }
+  .section__title {
+    margin-bottom: 30px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+    font-size: 80px; }
+  .section__cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .section__col {
+    font-family: "SatisfyRegular", sans-serif;
+    font-size: 20px;
+    width: calc( (((100% - (40px * (12 - 1))) / 12) * 4) + ( 40px * (4 - 1))); }
+  .section:nth-child(odd) {
+    background-color: #d0f2b0; }
+  .section:nth-child(even) {
+    background-color: #2d2d28;
+    color: #fff; }
+
+.pagination {
+  position: fixed;
+  bottom: 50vh;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  padding-left: 10px;
+  z-index: 100; }
+  .pagination__item {
+    margin: 10px;
+    display: block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: solid 1px #000;
+    -webkit-transition: background-color, .3s;
+    transition: background-color, .3s; }
+    .pagination__item:hover {
+      background-color: #000; }
+    .pagination__item--active {
+      background-color: #000; }
+    .pagination__item--even {
+      margin: 10px;
+      display: block;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      border: solid 1px #fff;
+      -webkit-transition: background-color, .3s;
+      transition: background-color, .3s; }
+      .pagination__item--even:hover {
+        background-color: #fff; }
+      .pagination__item--even--active {
+        background-color: #fff; }
